@@ -5,6 +5,10 @@ to detect and interpret fraudulent transactions using synthetic data.
 This project demonstrates the full lifecycle of a data science app, from data generation and
 model training to deployment and CI/CD automation.
 
+URL to access the model-
+https://anamoly-detection-with-ci-cd-pipelines-etvk3us6aaezk8sxqe2qii.streamlit.app
+
+
 ---
 
 ## 📁 Project Structure
