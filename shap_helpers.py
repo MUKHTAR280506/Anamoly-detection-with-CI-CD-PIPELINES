@@ -22,18 +22,20 @@ def plot_dependence(explainer, X_test, feature):
     shap_values = explainer.shap_values(X_test)
     st.subheader(f"Dependence Plot for {feature}")
     shap.dependence_plot(feature, shap_values, X_test, show=False)
+    fig = plt.gcf()
     #st.pyplot(fig)
-    st.pyplot(bbox_inches='tight')
+    st.pyplot(fig,bbox_inches='tight')
 
 def plot_waterfall(explainer, X_test, index):
-    fig = plt.figure(figsize=(10,8))
+    #fig = plt.figure(figsize=(10,8))
     shap_values = explainer.shap_values(X_test)
     st.subheader("Waterfall Plot for selected transaction")
     shap.plots._waterfall.waterfall_legacy(
         explainer.expected_value, shap_values[index], X_test.iloc[index]
     )
-    st.pyplot(fig)
-    #st.pyplot(bbox_inches='tight')
+    fig = plt.gcf()
+    # st.pyplot(fig)
+    st.pyplot(fig,bbox_inches='tight')
 
 def plot_force(explainer, X_test, index):
     fig = plt.figure(figsize=(10,8))
