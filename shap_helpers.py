@@ -16,6 +16,7 @@ def plot_summary(explainer, X_test):
     # other plotting actions...
     #st.pyplot(fig)
     st.pyplot(fig,bbox_inches='tight')
+    plt.clf()
 
 def plot_dependence(explainer, X_test, feature):
     #fig = plt.figure(figsize=(15,15))
@@ -25,6 +26,7 @@ def plot_dependence(explainer, X_test, feature):
     fig = plt.gcf()
     #st.pyplot(fig)
     st.pyplot(fig,bbox_inches='tight')
+    plt.clf()
 
 def plot_waterfall(explainer, X_test, index):
     #fig = plt.figure(figsize=(10,8))
@@ -36,6 +38,7 @@ def plot_waterfall(explainer, X_test, index):
     fig = plt.gcf()
     # st.pyplot(fig)
     st.pyplot(fig,bbox_inches='tight')
+    plt.clf()
 
 def plot_force(explainer, X_test, index):
     fig = plt.figure(figsize=(10,8))
