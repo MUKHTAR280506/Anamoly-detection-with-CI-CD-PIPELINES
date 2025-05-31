@@ -2,6 +2,8 @@
 import shap
 import matplotlib.pyplot as plt
 import streamlit as st
+import warnings
+warnings.filterwarnings('ignore')
 
 
 def plot_summary(explainer, X_test):

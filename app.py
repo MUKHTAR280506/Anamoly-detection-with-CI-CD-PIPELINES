@@ -3,6 +3,8 @@ import streamlit as st
 import pandas as pd
 import joblib
 from shap_helpers import plot_summary, plot_dependence, plot_waterfall, plot_force
+import warnings
+warnings.filterwarnings('ignore')
 
 # Load model and explainer
 model = joblib.load(r"models/xgb_fraud_model.pkl")
