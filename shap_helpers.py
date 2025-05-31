@@ -32,9 +32,11 @@ def plot_waterfall(explainer, X_test, index):
     #fig = plt.figure(figsize=(10,8))
     shap_values = explainer.shap_values(X_test)
     st.subheader("Waterfall Plot for selected transaction")
+    plt.clf()
     shap.plots._waterfall.waterfall_legacy(
         explainer.expected_value, shap_values[index], X_test.iloc[index]
     )
+    
     fig = plt.gcf()
     # st.pyplot(fig)
     st.pyplot(fig,bbox_inches='tight')
