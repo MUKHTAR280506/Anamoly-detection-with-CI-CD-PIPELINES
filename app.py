@@ -12,7 +12,7 @@ explainer = joblib.load(r"models/shap_explainer.pkl")
 X_test = pd.read_csv(r"datasets/X_test.csv")  # Save X_test earlier
 
 st.set_page_config(layout="wide")
-st.title("🔍 Fraud Detection & SHAP Explainability Dashboard")
+st.title("🔍 Fraud Detection & SHAP Explainability Dashboard Version 1.0")
 
 # Sidebar: Choose index
 idx = st.sidebar.slider("Select Transaction Index", 0, len(X_test)-1, 0)
