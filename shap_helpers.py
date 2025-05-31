@@ -11,11 +11,11 @@ def plot_summary(explainer, X_test):
     shap_values = explainer.shap_values(X_test)
     st.subheader("SHAP Summary Plot")
     shap.summary_plot(shap_values, X_test, plot_type="bar", show=False)
-    
+    fig = plt.gcf()
     #ax.scatter([1, 2, 3], [1, 2, 3])
     # other plotting actions...
     #st.pyplot(fig)
-    st.pyplot(bbox_inches='tight')
+    st.pyplot(fig,bbox_inches='tight')
 
 def plot_dependence(explainer, X_test, feature):
     #fig = plt.figure(figsize=(15,15))
