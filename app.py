@@ -5,11 +5,11 @@ import joblib
 from shap_helpers import plot_summary, plot_dependence, plot_waterfall, plot_force
 
 # Load model and explainer
-model = joblib.load(r"models\xgb_fraud_model.pkl")
-explainer = joblib.load(r"models\shap_explainer.pkl")
+model = joblib.load(r"models/xgb_fraud_model.pkl")
+explainer = joblib.load(r"models/shap_explainer.pkl")
 
 # Load sample test data
-X_test = pd.read_csv(r"datasets\X_test.csv")  # Save X_test earlier
+X_test = pd.read_csv(r"datasets/X_test.csv")  # Save X_test earlier
 
 st.set_page_config(layout="wide")
 st.title("🔍 Fraud Detection & SHAP Explainability Dashboard")
